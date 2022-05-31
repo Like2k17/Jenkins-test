@@ -21,5 +21,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        archiveArtifacts(artifacts: '.git', fingerprint: true)
+      }
+    }
+
   }
 }
