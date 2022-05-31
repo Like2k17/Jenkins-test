@@ -1,15 +1,23 @@
 pipeline {
   agent any
   stages {
-    stage('buzz build') {
+    stage('Build buzz') {
       steps {
-        sh './jenkins/build.sh'
+        sh 'echo "Hello World"'
+        sh '''
+                    echo "Multiline shell steps works for first stage"
+                    ls -lah
+                '''
       }
     }
 
-    stage('buzz test') {
+    stage('Test buzz') {
       steps {
-        sh './jenkins/test-all.sh'
+        sh 'echo "Hello from test"'
+        sh '''
+                    echo "Multiline shell steps works for second stage"
+                    ls -lah
+                '''
       }
     }
 
