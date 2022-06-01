@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo 'Buzz, Bees, Buzz!'
         echo 'Bees Buzzing!'
-        sleep 5
+        sleep 15
         echo 'Bees Buzzing Again'
       }
     }
