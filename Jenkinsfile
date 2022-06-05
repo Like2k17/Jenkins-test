@@ -6,7 +6,7 @@ pipeline {
           branch 'main'
       }
       steps {
-        input(message: 'Deploy to Stage', ok: 'Yes, let\'s do it!')
+        echo 'Deploy to Stage'
       }
     }
     stage('Deploy to Staging') {
@@ -15,7 +15,7 @@ pipeline {
       }
       steps {
         unstash 'Buzz Java 8'
-        sh 'Complete'
+        echo 'Complete'
       }
     }
   }
